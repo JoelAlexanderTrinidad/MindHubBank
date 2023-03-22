@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+.cards-main{
+    height: 100%;
+}
+.cards{
+    height: 10.5rem;
+    width: 17rem;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/gold-bg.jpg');
+    border-radius: 10px;
+    position: relative;
+}
+.cardExpired{
+    width: 10rem;
+    height: 1.5rem;
+    position: absolute;
+    border-radius: 5px;
+    left: -1rem;
+    top: -1rem;
+}
+
+.chip{
+    width: 2rem;
+    height: 1.5rem;
+    position: absolute;
+    background-color: #dbac47;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/chip.png');
+    bottom: 5rem;
+    left: 2rem;
+    border: .6px solid rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.wifi{
+    position: absolute;
+    bottom: 4.6rem;
+    left: 4.5rem;
+    rotate: 90deg;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.644);
+}
+
+.card-logo{
+    position: absolute;
+    background-image: url('../img/logo.png');
+    background-size: cover;
+    background-position: center;
+    width: 3rem;
+    height: 2.4rem;
+    right: 1rem;
+    top: 1rem;
+}
+
+.gold-text{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 12px;
+}
+
+.debit-text{
+    position: absolute;
+    right: 1rem;
+    bottom: 5rem;
+    font-size: 12px;
+    color: rgb(97, 13, 13);
+    text-shadow: 2px 2px 10px rgba(241,8,8,1);
+}
+
+.numberCard{
+    position: absolute;
+    left: 2.2rem;
+    bottom: 3rem;
+    font-size: 20px;
+    text-shadow: 0 1px 0 #5c480b, 3px 8px 5px #d4af3700;
+    color: #a57c1c;
+}
+
+.from-text{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 6px;
+}
+
+.from-text span, .thru-text span{
+    font-size: 10px;
+    color:rgb(0, 0, 0);
+}
+
+.thru-text{
+    position: absolute;
+    bottom: 2rem;
+    left: 7.4rem;
+    font-size: 6px;
+}
+
+.visa-logo-red{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: #bc0f0fa6;
+    border-radius: 50%;
+    right: 2rem;
+    bottom: 1rem;
+}
+
+.visa-logo-yellow{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: #b9bc0fad;
+    border-radius: 50%;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.client-name{
+    position: absolute;
+    font-size: 12px;
+    bottom: .8rem;
+    left: 2.2rem;
+}
+
+.silverCard{
+    height: 10.5rem;
+    width: 17rem;
+    background-position: center;
+    background-size: cover;
+    background-color: #d4af37;
+    background-image: url('../img/silver.jpg');
+    border-radius: 10px;
+    position: relative;
+}
+
+.numberCard-silver{
+    position: absolute;
+    left: 2.2rem;
+    bottom: 3rem;
+    font-size: 20px;
+    color: #bcbcbcc7;
+    text-shadow: 0 1px 0 #000000, 3px 8px 5px #d4af3700;
+}
+
+.titaniumCard{
+    height: 10.5rem;
+    width: 17rem;
+    background-position: center;
+    background-size: cover;
+    background-color: #d4af37;
+    background-image: url('../img/titanium.png');
+    border-radius: 10px;
+    position: relative;
+}
+
+.numberCard-titanium{
+    position: absolute;
+    left: 2.2rem;
+    bottom: 3rem;
+    font-size: 20px;
+    text-shadow: 0 1px 0 #a0a0a0, 3px 8px 5px #d4af3700;
+    color: #2b2b2b;
+}
+
+.credit-text{
+    position: absolute;
+    right: 1rem;
+    bottom: 5rem;
+    font-size: 12px;
+    color: rgb(13, 97, 38);
+    text-shadow: 2px 2px 10px rgb(8, 241, 20);
+}
+
+.here{
+    color: rgb(254, 8, 164);
+    cursor: pointer;
+    background-color: #d1d1d1;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.cards-table{
+    font-size: 14px;
+}
+
+.cards-table table{
+    caption-side: top;
+}
+
+.cards-table thead th{
+    background-color: #c4c4c4;
+}
+
+.cards-table td, .cards-table thead tr, .cards-table thead th{
+    padding: .5rem 0;
+    border: 1px solid rgb(156, 156, 156);
+}
+
+.trash-icon-card{
+    cursor: pointer;
+}
+
+@media(min-width: 768px){
+    .cards{
+        height: 8.5rem;
+        width: 13rem;
+    }
+    .numberCard, .numberCard-titanium, .numberCard-silver{
+        font-size: 14px;
+    }
+    .gold-text{
+        font-size: 10px;
+    }
+    .chip{
+        width: 1.5rem;
+        height: 1.2rem;
+        bottom: 4.3rem;
+        left: 2.5rem;
+    }
+    .card-logo {
+        width: 2.5rem;
+        height: 2rem;
+    }
+    .debit-text, .credit-text {
+        bottom: 4rem;
+        font-size: 10px;
+    }
+    .wifi {
+        bottom: 3.9rem;
+        font-size: 1.3rem;
+    }
+    .from-text {
+        font-size: 4px;
+    }
+    .from-text span, .thru-text span {
+        font-size: 8px;
+    }
+    .thru-text {
+        left: 6.4rem;
+        font-size: 4px;
+    }
+    .client-name {
+        font-size: 10px;
+    }
+    .visa-logo-red {
+        width: 1.5rem;
+        height: 1.5rem;
+        right: 1.5rem;
+    }
+    .visa-logo-yellow {
+        width: 1.5rem;
+        height: 1.5rem;
+        right: .7rem;
+    }
+    .from-text span, .thru-text span {
+        font-size: 6px;
+    }
+}
+
+@media(min-width: 992px){
+    .cards-shape{
+        background-image: url('../img/pngwing.com\ \(3\).png');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 45rem;
+        position: absolute;
+        z-index: -1;
+    }
+    .goldCard,.silverCard, .titaniumCard{
+        height: 15.5rem;
+        width: 24rem;
+        border-radius: 15px;
+    }
+    .chip {
+        width: 2rem;
+        height: 1.5rem;
+        top: 4rem;
+        left: 2.5rem;
+        border-radius: 6px;
+    }
+    .wifi {
+        top: 3rem;
+        left: 4.5rem;
+        font-size: 1.5rem;
+    }
+    .card-logo {
+        width: 3rem;
+        height: 2.2rem;
+        right: 1.6rem;
+        top: 1.3rem;
+    }
+    .gold-text{
+        left: 1.5rem;
+        top: 1rem;
+        font-size: 14px;
+    }
+    .debit-text, .credit-text {
+        right: 2rem;
+        top: 4.2rem;
+        font-size: 15px;
+    }
+    .numberCard, .numberCard-silver, .numberCard-titanium{
+        left: 2.6rem;
+        bottom: 3.2rem;
+        font-size: 18px;
+    }
+    .from-text {
+        bottom: 2rem;
+        left: 2.5rem;
+        font-size: 6px;
+    }
+    .from-text span, .thru-text span{
+        font-size: 10px;
+    }
+    .thru-text {
+        bottom: 2rem;
+        left: 8rem;
+        font-size: 6px;
+    }
+    .visa-logo-red {
+        width: 2rem;
+        height: 2rem;
+        right: 1.5rem;
+        bottom: 1rem;
+    }
+    .visa-logo-yellow {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        right: 0.6rem;
+        bottom: 1rem;
+    }
+
+    .cards {
+        height: 10.5rem;
+        width: 17rem;
+        -webkit-perspective: 600px;
+        -moz-perspective: 600px;
+        perspective: 600px;
+        background-image: none;
+    }
+    
+    .card__part-gold{
+        box-shadow: 1px 1px #aaa3a3;
+        top: 0;
+      position: absolute;
+        z-index: 1000;
+      left: 0;
+      display: inline-block;
+      height: 10.5rem;
+        width: 17rem;
+      background-position: center;
+      background-size: cover;
+      background-image: url('../img/gold-bg.jpg');
+      border-radius: 10px;
+      
+       
+        -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+    }
+
+    .card__part-silver{
+        box-shadow: 1px 1px #aaa3a3;
+        top: 0;
+      position: absolute;
+        z-index: 1000;
+      left: 0;
+      display: inline-block;
+      height: 10.5rem;
+        width: 17rem;
+      background-position: center;
+      background-size: cover;
+      background-image: url('../img/silver.jpg');
+      border-radius: 10px;
+      
+       
+        -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+    }
+    .silverCard{
+        background: none;
+    }
+    .titaniumCard{
+        background: none;
+    }
+    
+    .card__front{
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    }
+    
+    .card__back {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    }
+    
+    .card__black-line {
+        margin-top: 1rem;
+        height: 25px;
+        background-color: #303030;
+    }
+    
+    .card__back-content {
+        padding: 15px 15px 0;
+    }
+    .card__secret--last {
+        color: #303030;
+        text-align: right;
+        margin: 0;
+        font-size: 12px;
+    }
+    
+    .card__secret {
+        padding: 5px 12px;
+        background-color: #fff;
+        position:relative;
+    }
+    
+    .card__secret:before{
+      content:'';
+      position: absolute;
+        top: -3px;
+        left: -3px;
+        height: calc(100% + 6px);
+        width: calc(100% - 42px);
+        border-radius: 4px;
+      background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+    }
+    
+    
+    .cards:hover .card__front {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+    
+    }
+    
+    .cards:hover .card__back {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+    }
+    .cards-ilustration{
+        background-image: url('../img/payment.png');
+        background-position: center;
+        background-size: cover;
+        width: 10rem;
+        height: 12rem;
+        position: absolute;
+        right: 8rem;
+    }
+
+}
+
+

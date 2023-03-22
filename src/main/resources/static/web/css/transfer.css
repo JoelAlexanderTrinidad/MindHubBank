@@ -1,0 +1,118 @@
+.trasfer-ilustration{
+    background-image: url('../img/Photo\ Sharing-bro.png');
+    background-position: center;
+    background-size: cover;
+    width: 20rem;
+    height: 24rem;
+}
+.transfer-main{
+    min-height: 50rem;
+}
+.tansfer-nav{
+    height: 10rem;
+}
+.tranfer-form form{
+    width: 18rem    ;
+    height: 30rem;
+}
+.tranfer-form div{
+    width: 100%;
+}
+.tranfer-form label{
+    font-size: 14px;
+    text-align: center;
+}
+.tranfer-form input, textarea, select{
+    border-radius: 15px;
+}
+.tranfer-form input, .tranfer-form select{
+    height: 2rem;
+}
+.tranfer-form textarea{
+    text-align: center;
+    padding: 10px;
+    resize: none;
+    height: 6rem;
+}
+.transfer-textarea{
+    width: 100%;
+}
+.transfer-container-accounts-child{
+    background: linear-gradient(228deg,rgba(0,233,255,0.67) 0%, rgba(140,100,238,0.47) 50%, rgba(226,0,255,0.58) 100%);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    width: 16rem;
+    padding: 1.2rem 0;
+    box-shadow: -1px 10px 74px -25px rgba(7,140,237,0.75);
+}
+.where-transfer{
+    width: 18rem;
+    margin-top: 3rem;
+    font-size: 12px;
+    /* box-shadow: -1px 0px 66px 0px rgb(255 21 193 / 18%); */
+}
+.where-transfer select{
+    padding: .3rem 0;
+}
+.transfer-errors{
+    font-size: 12px;
+}
+.tranfer-container-form-child{
+    width: 18rem;
+    height: 8rem;
+    border-radius: 5px;
+    /* text-shadow: 4px 4px 4px rgb(14 70 74); */
+    padding: 5px;
+}
+.transfers-bg{
+    background-image: url('../img/bg-cp.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 768px){
+   
+    .tranfer-container-cards{
+        height: 100%;
+    }
+    .tranfer-container-form{
+       justify-content: space-evenly;  
+    }
+ 
+}
+   
+
+@media (min-width: 992px){
+    .transfer-container-accounts{
+        margin-right: 5rem;
+    }
+    .tansfer-nav{
+        height: 100%;
+    }
+    .where-transfer {
+        width: 26rem;
+        margin-top: 3rem;
+        font-size: 16px;
+    }
+    .tranfer-shape{
+        background-image: url('../img/pngwing.com\ \(1\).png');
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        width: 84rem;
+        height: 62rem;
+        z-index: -1;
+    }
+    .tranfer-shape2{
+        background-image: url('../img/Digital\ transformation-pana.png');
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        width: 13rem;
+        height: 12rem;
+        left: 3rem;
+        top: -6rem;
+        z-index: -1;
+    }
+}

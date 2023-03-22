@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+[v-cloak] {
+    display: none;
+}
+h1{
+    font-family: 'Tilt Warp';
+}
+#title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.accounts-nav{
+    font-family: 'Rubik Glitch';
+    font-size: 1.8rem;
+    color: rgb(254, 8, 164);
+}
+.accounts-nav-container a{
+    color: rgb(254, 8, 164);
+    text-decoration: none;
+}
+.navBar{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+    font-weight: 900;
+    left: 0;
+    top: 5.2rem;
+}
+.navBar a {
+    background-color: #ffffff;
+    color: rgb(254, 8, 164);
+    text-decoration: none;
+    z-index: 1;
+}
+#logout{
+    cursor: pointer;
+}
+.accounts-section2{
+    margin: 5rem 0 5rem 0;
+}
+.create-account-btn{
+    border: none;
+    color: rgba(254, 8, 164, 0.692);
+    background-color: #cecece;
+}
+.emphasis-accounts{
+    color: rgba(254, 8, 164, 0.692);
+}
+.chekingAccount{
+    background-color: #5971aa;
+    font-weight: bold;
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+}
+.savingsAccount{
+    background-color: #459a7d;
+    font-weight: bold;
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+}
+.bg-account{
+    background-image: url('../img/account-bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 768px){
+    .accounts-nav-container{
+        margin: 0 6rem;
+    }
+    .accounts-nav-md a{
+        text-decoration: none;
+        color: rgb(254, 8, 164);    
+    }
+    .accounts-nav-md a:hover{
+        color: rgba(255, 24, 170, 0.637);    
+    }
+    #title{
+        font-size: 3rem;
+    }
+   
+}
+
+@media (min-width: 1024px){
+    .accounts-nav-container{
+        margin: 0 7rem;
+    }
+    .accounts-ilustration{
+        background-image: url('../img/Business\ ethics-pana.png');
+        width: 28rem;
+        height: 28rem;
+        top: 8rem;
+        left: 6rem;
+        background-position: center;
+        background-size: cover;
+    }
+    .accounts-ilustration-services{
+        position: absolute;
+        background-image: url('../img/New\ entries-rafiki.png');
+        width: 25rem;
+        height: 25rem;
+        top: 5rem;
+        left: 6rem;
+        background-position: center;
+        background-size: cover;
+    }
+    .accounts-container-services{
+        width: 22rem;
+        height: 30rem;
+    }
+    .accounts-container-services a{
+        color: rgb(254, 8, 164);
+    }
+    .accounts-section2{
+        margin: 10rem 0 10rem 0;
+    }
+    .services1{
+        right: 8rem;
+        top: 3rem;
+    }
+    .services2{
+        left: 14rem;
+        top: 12rem;
+    }
+    .services3{
+        left: 4rem;
+        top: 20rem;
+    }
+    #title{
+        font-size: 3rem;
+    }
+    .accounts-container-number{
+        /* background-image: url('../img/pngwing.com\ \(4\).png');
+        background-position: center;
+        background-size: cover; */
+        height: 34rem;
+        width: 26rem;
+    }
+    .accounts-icon-card{
+        background-image: url('../img/pngfind.com-credit-cards-png-108000.png');
+        background-position: center;
+        background-size: cover;
+        width: 7rem;
+        height: 5rem;
+    }
+    .accounts-icon-transfer{
+        background-image: url('../img/transfer-icon.png');
+        background-position: center;
+        background-size: cover;
+        width: 7.6rem;
+        height: 5rem;
+    }
+    .accounts-icon-loan{
+        background-image: url('../img/Money_Illustration_Transparent_PNG_Clip_Art_Image.png');
+        background-position: center;
+        background-size: cover;
+        width: 6rem;
+        height: 6rem;
+    }
+    .accounts-shape1{
+        background-image: url('../img/shape.png');
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        width: 103rem;
+        height: 36rem;
+        transform: rotate(25deg);
+        left: -50rem;
+        top: 0rem;
+        z-index: -1;
+    }
+    .accounts-shape2 {
+        background-image: url('../img/pngwing.com.png');
+        background-position: center;
+        /* background-size: contain; */
+        position: absolute;
+        width: 82rem;
+        height: 47rem;
+        /* left: -50rem; */
+        top: 56rem;
+        z-index: -1;
+    }
+    .shape-account{
+        background-image: url('../img/pngwing.com\ \(4\).png');
+        background-position: center;
+        /* background-size: contain; */
+        width: 2rem;
+        height: 2rem;
+        /* left: -50rem; */
+        top: 56rem;
+    }
+    
+}

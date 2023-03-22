@@ -1,0 +1,86 @@
+/* td{
+    font-size: 12px;
+} */
+
+body{
+    background: rgb(0,170,178);
+    background: linear-gradient(0deg, rgba(60, 185, 207, 0.705) 0%, rgba(0,170,178,0) 100%);
+}
+
+.manager{
+    border-radius: 10px;
+    padding: 50px 30px;
+    background: rgb(0,170,178);
+    /* background: linear-gradient(0deg, #00a9b294 0%, rgba(235, 164, 229, 0.829) 80%); */
+    background: linear-gradient(0deg, #00a9b200 0%, rgb(181 42 215 / 26%) 80%);
+    box-shadow: 10px 10px 5px 0px #0f404294;
+}
+
+input{
+    width: 75%;
+    border: none;
+    border-radius: 6px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.label-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    border: none;
+    max-width: 38px;
+    border-radius: 5px;
+    background: none;
+}
+
+.btn-confirm-edit{
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #b0f7cc;
+    border: none;
+    color: #5e4a4a;
+    border-radius: 5px;
+}
+
+.btn-add{
+    padding: 8px 0;
+    border: none;
+    border-radius: 5px;
+    width: 18%;
+    background-color: #7a80d6;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn-add:hover{
+    background-color: #5658ad;
+    transition: all linear .2s;
+}
+
+.edit{
+    background-color: #3dc571;
+    color: white;
+}
+
+.manager{
+    font-size: 18px;
+    font-family: 'Cabin';
+   
+}
+
+.titles{
+    color: #575757;
+}
+
+.response{
+    font-weight: bold;
+    /* font-size: 18px; */
+
+}

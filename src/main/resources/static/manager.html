@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>| Clients manager |</title>
+</head>
+<body>
+    <div class="d-flex justify-content-around py-3 titles">
+        <h2>Client Manager</h2>
+        <h2>Client REST response</h2>
+    </div>
+<div id="app" class="d-flex  px-5">
+    <div class="row col-7 d-flex flex-column manager ">
+        <div >
+            <form @submit.prevent="">
+                <div class="">
+                    <div class="inputs">
+                        <div class="mb-3 label-input">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" v-model="inputFirstName" class=" " id="firstName">
+                        </div>
+                        <div class="mb-3 label-input">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" v-model="inputLastName" class="" id="lastName">
+                        </div>
+                        <div class="mb-3 label-input">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" v-model="inputEmail" class="" id="email">
+                        </div>
+                        
+                    </div>
+                    <div class="text-center mt-3">
+                        <button @click="addClient" class="btn-add me-2">ADD CLIENT</button>
+                        <button @click="cleanForm" class="btn-add ms-2">CLEAR</button>
+                    </div>
+                </div>
+            </form>
+            <div class=" mt-5">
+                <table class="table container-fluid">
+                    <thead>
+                      <tr>
+                        <th >First Name</th>
+                        <th >Last Name</th>
+                        <th >Email</th>
+                      </tr>
+                    </thead>
+                    <tbody v-for="(client, index) of clients">
+                        <tr>
+                            <td>{{client.firstName}}</td>
+                            <td>{{client.lastName}}</td>
+                            <td class="d-flex justify-content-between">{{client.email}}
+                                <div class="row row-cols-3 justify-content-between gap-2">
+                                    <button @click="getClient(client, index)" v-bind:id="client.email" :class="edit === index ? 'edit' : null " class="buttons"><i class="fa-solid fa-pen"></i></button>
+                                    <button @click="editClient(client)" class=" ms-3 btn-confirm-edit">confirm edit</button>
+                                    <button @click="deleteClient(client)" class="buttons" ><i class="fa-solid fa-trash text-danger "></i></button>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <pre class="response">
+        {{responseClients}}
+    </pre>
+    
+   
+</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f137d8c77f.js" crossorigin="anonymous"></script>
+<script src="./manager.js"></script>
+</body>
+</html>
