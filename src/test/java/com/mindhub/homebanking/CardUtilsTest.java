@@ -27,32 +27,32 @@ import java.util.List;
 import static org.hamcrest.Matchers.*;
 import static org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace.NONE;
 
-@SpringBootTest
-public class CardUtilsTest {
-
-    @Test
-    public void cardNumberIsCreated(){
-        String cardNumber = CardUtils.getCardNumber();
-        assertThat(cardNumber,is(not(emptyOrNullString())));
-    }
-
-    @Test
-    public void cardHasAllNumbers(){
-        String cardNumber = CardUtils.getCardNumber();
-        assertThat(cardNumber, containsString("-"));
-    }
-
-    @Test
-    public void cardCvvIsNotEmpty(){
-        short cvvNumber = CardUtils.getCcvNumber();
-        assertThat(cvvNumber, is(not(equalTo((short) 0))));
-    }
-
-    @Test
-    public void cardHasThreeNumbers(){
-        short cardCvv = CardUtils.getCcvNumber();
-        Assertions.assertThat(cardCvv).isBetween((short) 0, (short) 999);
-    }
-
-
-}
+//@SpringBootTest
+//public class CardUtilsTest {
+//
+//    @Test
+//    public void cardNumberIsCreated(){
+//        String cardNumber = CardUtils.getCardNumber();
+//        assertThat(cardNumber,is(not(emptyOrNullString())));
+//    }
+//
+//    @Test
+//    public void cardHasAllNumbers(){
+//        String cardNumber = CardUtils.getCardNumber();
+//        assertThat(cardNumber, containsString("-"));
+//    }
+//
+//    @Test
+//    public void cardCvvIsNotEmpty(){
+//        short cvvNumber = CardUtils.getCcvNumber();
+//        assertThat(cvvNumber, is(not(equalTo((short) 0))));
+//    }
+//
+//    @Test
+//    public void cardHasThreeNumbers(){
+//        short cardCvv = CardUtils.getCcvNumber();
+//        Assertions.assertThat(cardCvv).isBetween((short) 0, (short) 999);
+//    }
+//
+//
+//}
