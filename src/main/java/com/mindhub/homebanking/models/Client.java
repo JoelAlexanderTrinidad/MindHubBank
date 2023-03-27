@@ -81,7 +81,6 @@ public class Client {
     public void setFirstName(String firstName){
         this.firstName = firstName;
     }
-
     public String toString(){
         return id + " " + firstName + " " + lastName + " " + email;
     }

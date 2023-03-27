@@ -36,18 +36,6 @@ public class WebSecurityAuthentication extends GlobalAuthenticationConfigurerAda
             }
             throw new UsernameNotFoundException("Unknown user: " + inputName);
 
-
-//            if(client. == null){
-//                throw new UsernameNotFoundException("Unknown user: " + inputName);
-//            }else if(client.getEmail().equals("admin@admin.com")){
-//                return new User(client.getEmail(), client.getPassword(),
-//                        AuthorityUtils.createAuthorityList("ADMIN"));
-//            } else {
-//                return new User(client.getEmail(), client.getPassword(),
-//                        AuthorityUtils.createAuthorityList("CLIENT"));
-//            }
-
-
         });
     }
 

@@ -48,7 +48,7 @@ public class TransactionController {
 
         String errors = "";
 
-        if(sourceAcc == null && destinationAcc == null){
+        if(sourceAcc == null){
             errors += "the source account does not exist";
         }
         if(destinationAcc == null){
