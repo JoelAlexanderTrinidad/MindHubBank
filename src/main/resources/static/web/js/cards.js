@@ -20,7 +20,7 @@ createApp({
     },
     methods:{
         loadData(){
-            axios.get('http://localhost:8080/api/clients/current')
+            axios.get('/api/clients/current')
                 .then(response => {
 
                     this.data = response.data;
@@ -59,14 +59,14 @@ createApp({
         },
         signOut(){
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'http://localhost:8080/web/views/index.html';
+            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/index.html';
         },
         hereBtn(){
             this.here = !this.here
             console.log(this.here)
         },
         createCard(){
-            window.location.href = 'http://localhost:8080/web/views/create-cards.html';
+            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/create-cards.html';
         },
         deleteCard(id){
 

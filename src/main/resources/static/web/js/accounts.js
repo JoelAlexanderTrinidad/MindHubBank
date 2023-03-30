@@ -13,7 +13,7 @@ createApp({
         }
     },
     created(){
-        axios.get('http://localhost:8080/api/clients/current')
+        axios.get('/api/clients/current')
             .then(response => {
                 this.data = response.data;
                 this.accounts = response.data.accounts.filter(account => account.eliminated == false)
@@ -104,7 +104,7 @@ createApp({
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
                 .then(response => console.log(response))
                 .catch(err => console.log(err))
-            window.location.href = 'http://localhost:8080/web/views/index.html';
+            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/index.html';
             console.log('log out')
         }
     }

@@ -45,7 +45,7 @@ createApp({
     },
     methods:{
         loadData(){
-            axios.get('http://localhost:8080/api/clients/current')
+            axios.get('/api/clients/current')
                 .then(response => {
                     this.data = response.data;
                     this.accounts = response.data.accounts.filter(account => account.eliminated == false)
@@ -53,7 +53,7 @@ createApp({
                 })
                 .catch(err => console.log(err))
 
-            axios.get('http://localhost:8080/api/loans')
+            axios.get('/api/loans')
                 .then(response => {
                     this.loans = response.data
                     console.log(this.loans)
@@ -83,7 +83,7 @@ createApp({
         },
         signOut(){
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'http://localhost:8080/web/views/index.html';
+            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/index.html';
         },
         createLoan(){
           let loan = this.loans.find(loan => loan.name == this.creditType)
@@ -117,7 +117,7 @@ createApp({
                         'success'
                       )
                       setTimeout(() => {
-                        window.location.href = 'http://localhost:8080/web/views/accounts.html';
+                        window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/accounts.html';
                     }, 2300)
                 })
                 .catch(err => {

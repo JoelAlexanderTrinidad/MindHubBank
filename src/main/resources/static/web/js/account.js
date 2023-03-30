@@ -17,7 +17,7 @@ createApp({
 
             this.clientID = id;
 
-            axios.get(`http://localhost:8080/api/accounts/${id}`)
+            axios.get(`/api/accounts/${id}`)
                 .then(response => {
                     let transactions = response.data.transactions;
                     this.transactions = transactions.sort((a, b) => b.id - a.id); // ordeno las transacciones por id de manera desendiente
@@ -38,7 +38,7 @@ createApp({
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
                 .then(response => console.log(response))
                 .catch(err => console.log(err))
-            window.location.href = 'http://localhost:8080/web/views/index.html';
+            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/index.html';
             console.log('log out')
         }
     }
