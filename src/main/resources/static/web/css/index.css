@@ -9,7 +9,7 @@
 .index-logo {
   font-family: 'Rubik Glitch';
   font-size: 1.8rem;
-  color: rgb(49 7 33);
+  color: rgb(238 91 182);
   position: absolute;
   left: 5rem;
   top: 1rem;
@@ -21,7 +21,7 @@
 }
 
 .bg-image {
-  background-image: url('../img/pexels-thirdman-6238096.webp');
+  background-image: url('../img/pexels-photo-6238363.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -5rem;
@@ -148,7 +148,6 @@ modal-sign-up a:hover {
 @media (min-width: 992px){
   .index-logo {
     font-size: 3.8rem;
-    color: rgb(72 1 45);
     left: 7rem;
     top: 1rem;
   }

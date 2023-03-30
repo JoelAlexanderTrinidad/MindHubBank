@@ -82,6 +82,36 @@ h1{
     background-size: cover;
 }
 
+.icon-card-xs{
+    width: 4rem;
+    height: 5rem;
+    background-image: url('../img/payment.png');
+    background-position: center;
+    background-size: cover;
+    top: -3.5rem;
+    left: -2rem;
+}
+
+.icon-tranfer-xs{
+    width: 5rem;
+    height: 4rem;
+    background-image: url('../img/transfer-icon.png');
+    background-position: center;
+    background-size: cover;
+    top: -3.5rem;
+    left: -2rem;
+}
+
+.icon-loans-xs{
+    width: 3rem;
+    height: 3rem;
+    background-image: url('../img/Money_Illustration_Transparent_PNG_Clip_Art_Image.png');
+    background-position: center;
+    background-size: cover;
+    top: -3.5rem;
+    left: -2rem;
+}
+
 @media (min-width: 768px){
     .accounts-nav-container{
         margin: 0 6rem;
