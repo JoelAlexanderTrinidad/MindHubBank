@@ -38,7 +38,7 @@ createApp({
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
                 .then(response => console.log(response))
                 .catch(err => console.log(err))
-            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/index.html';
+            window.location.href = 'http://localhost:8080/web/views/index.html';
             console.log('log out')
         }
     }

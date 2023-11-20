@@ -41,7 +41,7 @@ createApp({
         },
         signOut(){
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/index.html';
+            window.location.href = 'http://localhost:8080/web/views/index.html';
         },
         burgerMenu(){
             this.toggle = !this.toggle

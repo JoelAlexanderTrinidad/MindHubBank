@@ -37,7 +37,7 @@ createApp({
         },
         signOut(){
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/index.html';
+            window.location.href = 'http://localhost:8080/web/views/index.html';
         },
         burgerMenu(){
             this.toggle = !this.toggle
@@ -47,7 +47,7 @@ createApp({
             axios.post('/api/clients/current/cards',`cardType=${this.cardType}&cardColor=${this.cardColor}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                 .then(response => {
                     console.log(response)
-                    window.location.href = 'https://mindhubbank-production-6712.up.railway.app/web/views/cards.html';
+                    window.location.href = 'http://localhost:8080/web/views/cards.html';
                 })
                 .catch(err => {
                     

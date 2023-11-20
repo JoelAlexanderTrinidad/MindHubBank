@@ -63,8 +63,6 @@ public class Account {
 
     public Set<Transaction> getTransactions(){ return transactions; }
 
-
-
     public void setNumber(String number){ this.number = number; }
 
     public void setClient(Client client) { this.client = client; }
