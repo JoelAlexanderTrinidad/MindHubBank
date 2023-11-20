@@ -38,7 +38,7 @@ createApp({
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
                 .then(response => console.log(response))
                 .catch(err => console.log(err))
-            window.location.href = 'http://localhost:8080/web/views/index.html';
+            window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/account.html';
             console.log('log out')
         }
     }

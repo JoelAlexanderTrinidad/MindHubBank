@@ -32,7 +32,7 @@ createApp({
                 console.log('signed in!!!')
                 console.log(response)
                 
-                window.location.href = 'http://localhost:8080/web/views/accounts.html';
+                window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';
 
             })
             .catch(err => {

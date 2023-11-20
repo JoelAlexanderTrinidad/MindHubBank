@@ -83,7 +83,7 @@ createApp({
         },
         signOut(){
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'http://localhost:8080/web/views/index.html';
+            window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';
         },
         createLoan(){
           let loan = this.loans.find(loan => loan.name == this.creditType)
@@ -117,7 +117,7 @@ createApp({
                         'success'
                       )
                       setTimeout(() => {
-                        window.location.href = 'http://localhost:8080/web/views/accounts.html';
+                        window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/accounts.html';
                     }, 2300)
                 })
                 .catch(err => {
