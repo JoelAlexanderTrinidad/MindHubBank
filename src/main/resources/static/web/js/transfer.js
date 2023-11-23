@@ -36,7 +36,7 @@ createApp({
     methods:{
         loadData(){
 
-            axios.get('/api/clients/current')
+            axios.get('https://mindhubbank-8dkk.onrender.com/api/clients/current')
                 .then(response => {
                     this.data = response.data;
                     this.cards = this.data.cards;
@@ -83,7 +83,7 @@ createApp({
                         if (result.isConfirmed) {
 
 
-                            axios.post('/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.numberAccountDestination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+                            axios.post('https://mindhubbank-8dkk.onrender.com/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.numberAccountDestination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                             .then(response => {
                                 Swal.fire(
                                     'Amount transferred!',
@@ -153,7 +153,7 @@ createApp({
                     confirmButtonText: 'Yes, transfer!'
                   }).then((result) => {
                     if (result.isConfirmed) {
-                        axios.post('/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.destination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+                        axios.post('https://mindhubbank-8dkk.onrender.com/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.destination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                         .then(response => {
                             Swal.fire(
                                 'Amount transferred!',

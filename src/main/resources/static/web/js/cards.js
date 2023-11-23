@@ -20,7 +20,7 @@ createApp({
     },
     methods:{
         loadData(){
-            axios.get('/api/clients/current')
+            axios.get('https://mindhubbank-8dkk.onrender.com/api/clients/current')
                 .then(response => {
 
                     this.data = response.data;
@@ -58,7 +58,7 @@ createApp({
             console.log(this.toggle)
         },
         signOut(){
-            axios.post('/api/logout').then(response => console.log('signed out!!!'))
+            axios.post('https://mindhubbank-8dkk.onrender.com/api/logout').then(response => console.log('signed out!!!'))
             window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';
         },
         hereBtn(){
@@ -80,7 +80,7 @@ createApp({
                 confirmButtonText: 'Yes, delete!'
               }).then((result) => {
                 if (result.isConfirmed) {
-                    axios.post(`/api/clients/current/cards/${id}`)
+                    axios.post(`https://mindhubbank-8dkk.onrender.com/api/clients/current/cards/${id}`)
                     .then(response => {
                         Swal.fire(
                             'Card deleted!',

@@ -44,7 +44,7 @@ createApp({
         },
         signUp(){
            
-            axios.post('https://mindhubbank-8dkk.onrender.com/api/clients',`firstName=${this.firstNameSignUp}&lastName=${this.lastNameSignUp}&email=${this.emailSignUp}&password=${this.passwordSignUp}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+            axios.post('https://mindhubbank-8dkk.onrender.com/api/clients',`firstName=${this.firstNameSignUp}&lastName=${this.lastNameSignUp}&password=${this.passwordSignUp}&email=${this.emailSignUp}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                 .then(response => {
                     console.log('registered')
                     console.log(response)
@@ -53,11 +53,11 @@ createApp({
                     this.signIn();
                 })
                 .catch(err => {
-                    this.signInError = err.response.data
-                    console.log(err)
-                    let errorArr = this.signInError.split("-")
-                    console.log(errorArr)
-
+                    console.error('Error during sign-up:', err);
+                    this.signInError = err.response.data;
+                    let errorArr = this.signInError.split("-");
+                    console.log('Error array:', errorArr);
+                    
 
                     if(errorArr.includes("Missing first name")){
                         this.firstName = "Missing first name"

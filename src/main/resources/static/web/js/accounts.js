@@ -13,7 +13,7 @@ createApp({
         }
     },
     created(){
-        axios.get('/api/clients/current')
+        axios.get('https://mindhubbank-8dkk.onrender.com/api/clients/current')
             .then(response => {
                 this.data = response.data;
                 this.accounts = response.data.accounts.filter(account => account.eliminated == false)
@@ -51,7 +51,7 @@ createApp({
               })
               .then((result) => {
                 if (result.isConfirmed) {
-                    axios.post('/api/clients/current/accounts',`accountType=${this.accountType}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+                    axios.post('https://mindhubbank-8dkk.onrender.com/api/clients/current/accounts',`accountType=${this.accountType}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                     .then(response => {
                         Swal.fire(
                             'Account created!',
@@ -83,7 +83,7 @@ createApp({
               .then((result) => {
                 if (result.isConfirmed) {
 
-                    axios.post(`/api/accounts/delete/${number}`)
+                    axios.post(`https://mindhubbank-8dkk.onrender.com/api/accounts/delete/${number}`)
                     .then(response => {
                         Swal.fire(
                             'Account deleted!',
@@ -101,7 +101,7 @@ createApp({
               })
         },
         signOut(){
-            axios.post('/api/logout').then(response => console.log('signed out!!!'))
+            axios.post('https://mindhubbank-8dkk.onrender.com/api/logout').then(response => console.log('signed out!!!'))
                 .then(response => console.log(response))
                 .catch(err => console.log(err))
             window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';

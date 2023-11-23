@@ -45,7 +45,7 @@ createApp({
     },
     methods:{
         loadData(){
-            axios.get('/api/clients/current')
+            axios.get('https://mindhubbank-8dkk.onrender.com/api/clients/current')
                 .then(response => {
                     this.data = response.data;
                     this.accounts = response.data.accounts.filter(account => account.eliminated == false)
@@ -53,7 +53,7 @@ createApp({
                 })
                 .catch(err => console.log(err))
 
-            axios.get('/api/loans')
+            axios.get('https://mindhubbank-8dkk.onrender.com/api/loans')
                 .then(response => {
                     this.loans = response.data
                     console.log(this.loans)
