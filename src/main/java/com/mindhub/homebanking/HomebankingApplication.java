@@ -68,7 +68,7 @@ public class HomebankingApplication {
 	public CommandLineRunner initData(ClientRepository clientRepository, AccountRepository accountRepository, TransactionRepository transactionRepository, LoanRepository loanRerpository, ClientLoanRepository clientLoanRepository, CardRepository cardRepository) {
 		return (args) -> {
 
-			Client client1 = new Client("Melba", "Morel", "melba@mindhub.com", passwordEncoder.encode("asd"));
+			Client client1 = new Client("Lalo", "Landa", "test@test.com", passwordEncoder.encode("1234"));
 			Client client2 = new Client("Milhouse", "Van Houten", "milhouse@springfield.com",passwordEncoder.encode("asd"));
 			Client admin = new Client("Admin", "Admin", "admin@admin.com",passwordEncoder.encode("asd"));
 
