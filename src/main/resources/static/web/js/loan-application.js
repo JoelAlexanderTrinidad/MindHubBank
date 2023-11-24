@@ -45,7 +45,7 @@ createApp({
     },
     methods:{
         loadData(){
-            axios.get('https://localhost:8080/api/clients/current')
+            axios.get('/api/clients/current')
                 .then(response => {
                     this.data = response.data;
                     this.accounts = response.data.accounts.filter(account => account.eliminated == false)
@@ -53,7 +53,7 @@ createApp({
                 })
                 .catch(err => console.log(err))
 
-            axios.get('https://localhost:8080/api/loans')
+            axios.get('/api/loans')
                 .then(response => {
                     this.loans = response.data
                     console.log(this.loans)
@@ -83,7 +83,7 @@ createApp({
         },
         signOut(){
             axios.post('/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'https://localhost:8080/web/views/index.html';
+            window.location.href = '/web/views/index.html';
         },
         createLoan(){
           let loan = this.loans.find(loan => loan.name == this.creditType)
@@ -103,7 +103,7 @@ createApp({
             confirmButtonText: 'Yes, give me the loan!'
           }).then((result) => {
             if (result.isConfirmed) {
-              axios.post('https://localhost:8080/api/loans', { 
+              axios.post('/api/loans', { 
                 loanID: this.loan, 
                 amount: this.amount, 
                 payments: this.selectedPayment, 
@@ -117,7 +117,7 @@ createApp({
                         'success'
                       )
                       setTimeout(() => {
-                        window.location.href = 'https://localhost:8080/web/views/accounts.html';
+                        window.location.href = '/web/views/accounts.html';
                     }, 2300)
                 })
                 .catch(err => {

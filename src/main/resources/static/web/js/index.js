@@ -27,12 +27,12 @@ createApp({
            
         },
         signIn(){
-            axios.post('https://localhost:8080/api/login',`email=${this.inputEmail}&password=${this.inputPassword}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+            axios.post('/api/login',`email=${this.inputEmail}&password=${this.inputPassword}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
             .then(response => {
                 console.log('signed in!!!')
                 console.log(response)
                 
-                window.location.href = 'https://localhost:8080/web/views/accounts.html';
+                window.location.href = '/web/views/accounts.html';
 
             })
             .catch(err => {
@@ -44,7 +44,7 @@ createApp({
         },
         signUp(){
            
-            axios.post('https://localhost:8080/api/clients',`firstName=${this.firstNameSignUp}&lastName=${this.lastNameSignUp}&password=${this.passwordSignUp}&email=${this.emailSignUp}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+            axios.post('/api/clients',`firstName=${this.firstNameSignUp}&lastName=${this.lastNameSignUp}&password=${this.passwordSignUp}&email=${this.emailSignUp}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                 .then(response => {
                     console.log('registered')
                     console.log(response)
