@@ -23,7 +23,7 @@ createApp({
         
         loadData(){
            
-            axios.get('https://mindhubbank-8dkk.onrender.com/api/clients/current')
+            axios.get('https://localhost:8080/api/clients/current')
                 .then(response => {
                     this.data = response.data;
                     this.cards = this.data.cards;
@@ -36,18 +36,18 @@ createApp({
             this.toggle = !this.toggle;
         },
         signOut(){
-            axios.post('https://mindhubbank-8dkk.onrender.com/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';
+            axios.post('https://localhost:8080/api/logout').then(response => console.log('signed out!!!'))
+            window.location.href = 'https://localhost:8080/web/views/index.html';
         },
         burgerMenu(){
             this.toggle = !this.toggle
             console.log(this.toggle)
         },
         createCard(){
-            axios.post('https://mindhubbank-8dkk.onrender.com/api/clients/current/cards',`cardType=${this.cardType}&cardColor=${this.cardColor}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+            axios.post('https://localhost:8080/api/clients/current/cards',`cardType=${this.cardType}&cardColor=${this.cardColor}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                 .then(response => {
                     console.log(response)
-                    window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/cards.html';
+                    window.location.href = 'https://localhost:8080/web/views/cards.html';
                 })
                 .catch(err => {
                     

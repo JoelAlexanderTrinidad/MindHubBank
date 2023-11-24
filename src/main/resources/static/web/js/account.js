@@ -17,7 +17,7 @@ createApp({
 
             this.clientID = id;
 
-            axios.get(`https://mindhubbank-8dkk.onrender.com/api/accounts/${id}`)
+            axios.get(`https://localhost:8080/api/accounts/${id}`)
                 .then(response => {
                     let transactions = response.data.transactions;
                     this.transactions = transactions.sort((a, b) => b.id - a.id); // ordeno las transacciones por id de manera desendiente
@@ -35,10 +35,10 @@ createApp({
             console.log(this.toggle)
         },
         signOut(){
-            axios.post('https://mindhubbank-8dkk.onrender.com/api/logout').then(response => console.log('signed out!!!'))
+            axios.post('https://localhost:8080/api/logout').then(response => console.log('signed out!!!'))
                 .then(response => console.log(response))
                 .catch(err => console.log(err))
-            window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/account.html';
+            window.location.href = 'https://localhost:8080/web/views/account.html';
             console.log('log out')
         }
     }

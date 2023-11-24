@@ -36,7 +36,7 @@ createApp({
     methods:{
         loadData(){
 
-            axios.get('https://mindhubbank-8dkk.onrender.com/api/clients/current')
+            axios.get('https://localhost:8080/api/clients/current')
                 .then(response => {
                     this.data = response.data;
                     this.cards = this.data.cards;
@@ -55,8 +55,8 @@ createApp({
             this.toggle = !this.toggle;
         },
         signOut(){
-            axios.post('https://mindhubbank-8dkk.onrender.com/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';
+            axios.post('https://localhost:8080/api/logout').then(response => console.log('signed out!!!'))
+            window.location.href = 'https://localhost:8080/web/views/index.html';
         },
         burgerMenu(){
             this.toggle = !this.toggle
@@ -83,7 +83,7 @@ createApp({
                         if (result.isConfirmed) {
 
 
-                            axios.post('https://mindhubbank-8dkk.onrender.com/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.numberAccountDestination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+                            axios.post('https://localhost:8080/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.numberAccountDestination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                             .then(response => {
                                 Swal.fire(
                                     'Amount transferred!',
@@ -153,7 +153,7 @@ createApp({
                     confirmButtonText: 'Yes, transfer!'
                   }).then((result) => {
                     if (result.isConfirmed) {
-                        axios.post('https://mindhubbank-8dkk.onrender.com/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.destination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
+                        axios.post('https://localhost:8080/api/transactions',`amount=${this.amount}&description=${this.description}&sourceAccount=${this.numberAccountSource}&destinationAccount=${this.destination}`,{headers:{'content-type':'application/x-www-form-urlencoded'}})
                         .then(response => {
                             Swal.fire(
                                 'Amount transferred!',

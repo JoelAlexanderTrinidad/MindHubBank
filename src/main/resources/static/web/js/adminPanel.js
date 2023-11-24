@@ -27,7 +27,7 @@ createApp({
         
         loadData(){
            
-            axios.get('https://mindhubbank-8dkk.onrender.com/api/clients/current')
+            axios.get('https://localhost:8080/api/clients/current')
                 .then(response => {
                     this.data = response.data;
                     this.cards = this.data.cards;
@@ -40,8 +40,8 @@ createApp({
             this.toggle = !this.toggle;
         },
         signOut(){
-            axios.post('https://mindhubbank-8dkk.onrender.com/api/logout').then(response => console.log('signed out!!!'))
-            window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';
+            axios.post('https://localhost:8080/api/logout').then(response => console.log('signed out!!!'))
+            window.location.href = 'https://localhost:8080/web/views/index.html';
         },
         burgerMenu(){
             this.toggle = !this.toggle
@@ -59,7 +59,7 @@ createApp({
             confirmButtonText: 'Yes, give me the loan!'
           }).then((result) => {
             if (result.isConfirmed) {
-                axios.post('https://mindhubbank-8dkk.onrender.com/api/loans/admin',`loanName=${this.newNameLoan}&maxAmount=${this.newMaxAmountLoan}&payments=${this.newPayLoan}&percentage=${this.newPercentageLoan}`)
+                axios.post('https://localhost:8080/api/loans/admin',`loanName=${this.newNameLoan}&maxAmount=${this.newMaxAmountLoan}&payments=${this.newPayLoan}&percentage=${this.newPercentageLoan}`)
                 .then(response => {
                     Swal.fire(
                         'Acquired loan!',
