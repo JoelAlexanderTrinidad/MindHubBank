@@ -55,7 +55,7 @@ createApp({
             this.toggle = !this.toggle;
         },
         signOut(){
-            axios.post('/api/logout').then(response => console.log('signed out!!!'))
+            axios.post('https://mindhubbank-8dkk.onrender.com/api/logout').then(response => console.log('signed out!!!'))
             window.location.href = 'https://mindhubbank-8dkk.onrender.com/web/views/index.html';
         },
         burgerMenu(){

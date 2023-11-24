@@ -103,7 +103,7 @@ createApp({
             confirmButtonText: 'Yes, give me the loan!'
           }).then((result) => {
             if (result.isConfirmed) {
-              axios.post('/api/loans', { 
+              axios.post('https://mindhubbank-8dkk.onrender.com/api/loans', { 
                 loanID: this.loan, 
                 amount: this.amount, 
                 payments: this.selectedPayment, 

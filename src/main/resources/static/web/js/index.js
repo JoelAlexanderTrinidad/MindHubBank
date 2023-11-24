@@ -4,8 +4,8 @@ createApp({
     data(){
         
         return {
-            inputEmail: '',
-            inputPassword: '',
+            inputEmail: 'test@test.com',
+            inputPassword: '1234',
             firstNameSignUp: '',
             lastNameSignUp: '',
             emailSignUp: '',
